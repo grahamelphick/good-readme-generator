@@ -1,21 +1,32 @@
-# dnrg
+# README Generator
 
 ## Description
-rgrgmrg
+Creates a good-looking readme with all the necessary information.
 
 ## Table of Contents
-[Installation] (#-installation)
-[Usage] (#usage)
-[Credits] (#credits)
-[Test Instructions] (#test-instructions)
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Contribution Guidelines](#contribution-guidelines)
+
+[Test Instructions](#test-instructions)
+
+[Questions](#questions)
 
 ## Installation
-eg
+npm install inquirer
 
 ## Usage
-et
+free to us
 
-## Credits
-r
+## Contribution Guidelines
+none
 
 ## Test Instructions
+none
+
+## Questions
+My GitHub: https://github.com/grahamelphick
+
+If you have any further questions, you can reach me at 123@gmail.com .

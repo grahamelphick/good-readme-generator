@@ -24,13 +24,23 @@ inquirer.prompt([
   },
   {
     type: "input",
-    name: "credits",
+    name: "contributionguidelines",
     message: "List any collaborators with links to their GitHub profiles:"
   },
   {
     type: "input",
     name: "tests",
     message: "Provide the test instructions for your project:"
+  },
+  {
+    type: "input",
+    name: "github",
+    message: "What is your GitHub username?"
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
   },
   {
     type: "list",
@@ -47,16 +57,20 @@ inquirer.prompt([
 
   fs.appendFileSync("README.md", "## " + "Description" + '\n' + answers.description + '\n' + '\n');
 
-  fs.appendFileSync("README.md", "## " + "Table of Contents" + '\n' + "[Installation] " + "(#-installation)" + '\n');
-  fs.appendFileSync("README.md", "[Usage] " + "(#usage)" + '\n');
-  fs.appendFileSync("README.md", "[Credits] " + "(#credits)" + '\n');
-  fs.appendFileSync("README.md", "[Test Instructions] " + "(#test-instructions)" + '\n' + '\n');
-
+  fs.appendFileSync("README.md", "## " + "Table of Contents" + '\n' + "[Installation]" + "(#installation)" + '\n' + '\n');
+  fs.appendFileSync("README.md", "[Usage]" + "(#usage)" + '\n' + '\n');
+  fs.appendFileSync("README.md", "[Contribution Guidelines]" + "(#contribution-guidelines)" + '\n' + '\n');
+  fs.appendFileSync("README.md", "[Test Instructions]" + "(#test-instructions)" + '\n' + '\n');
+  fs.appendFileSync("README.md", "[Questions]" + "(#questions)" + '\n' + '\n');
 
   fs.appendFileSync("README.md", "## " + "Installation" + '\n' + answers.installation + '\n' + '\n');
   fs.appendFileSync("README.md", "## " + "Usage" + '\n' + answers.usage + '\n' + '\n');
-  fs.appendFileSync("README.md", "## " + "Credits" + '\n' + answers.credits + '\n' + '\n');
-  fs.appendFileSync("README.md", "## " + "Test Instructions" + '\n' + answers.tests);
+  fs.appendFileSync("README.md", "## " + "Contribution Guidelines" + '\n' + answers.contributionguidelines + '\n' + '\n');
+  fs.appendFileSync("README.md", "## " + "Test Instructions" + '\n' + answers.tests + '\n' + '\n');
+  fs.appendFileSync("README.md", "## " + "Questions" + '\n' + "My GitHub: " + ("https://github.com/" + answers.github) + '\n' + '\n');
+  fs.appendFileSync("README.md", "If you have any further questions, you can reach me at " + answers.email + " .");
+
+
 
 });
 // (function generateRM (data) {
